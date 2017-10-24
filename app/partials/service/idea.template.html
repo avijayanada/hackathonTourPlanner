@@ -1,0 +1,87 @@
+<form name="manageIdeaForm" ng-submit="ctrl.submit(manageIdeaForm)" >
+    <!--Logged in to facebook and user is registered-->
+    <div ng-if="ctrl.isLoggedIn.status && !ctrl.isnotRegistred">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">Submit Your Idea</h3>
+            <button type="button" class="close" data-dismiss="modal" ng-click="ctrl.closeModal()">&times;</button>
+        </div>
+        <div class="modal-body col-xs-12 idea" id="modal-body">
+            <div class="col-xs-12 p-o">
+                <div class="col-xs-12" ng-if="!ctrl.editMode && !ctrl.disableOption">
+                    <label for="exampleFormControlSelect1">Category</label>
+                    <select class="form-control" ng-model="ctrl.formData.type" name="cat-name" id="exampleFormControlSelect1">
+                        <option value="E">Entrepreneur</option>
+                        <option value="I">Innovator</option>
+                    </select>
+                </div>
+
+                <div class="col-xs-12">
+                    <div class="col-xs-12 p-0">
+                        <input type="text" name="f-title" validation="required"
+                               ng-model="ctrl.formData.title" placeholder="Title" class="form-control">
+                    </div>
+                    <div class="col-xs-12 p-0">
+                <textarea class="form-control" name="f-ides" validation="required"
+                          ng-model="ctrl.formData.idea"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer idea">
+            <div class="col-xs-12">
+                <button class="btn btn-warning" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+    <!--Logged in to facebook but user is not registered-->
+    <div ng-if="ctrl.isLoggedIn.status && ctrl.isnotRegistred">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title-user">Enter User Details</h3>
+        </div>
+        <div class="modal-body col-xs-12 idea" id="modal-body-user">
+            <div class="col-xs-12 p-o">
+                <div class="col-xs-4">
+                    <img class="img-responsive profile-image" src="{{ctrl.userDetails.profileImage}}">
+                </div>
+
+                <div class="col-xs-8 p-0">
+                    <div class="col-xs-12 p-0">
+                        <input type="text" class="form-control" ng-disabled="1" ng-model="ctrl.userDetails.name" placeholder="Name" name="ad-name">
+                    </div>
+                    <div class="col-xs-12 p-0">
+                        <input type="text" class="form-control" validation="required" ng-disabled="0" ng-model="ctrl.userDetails.class_" name="ad-class" placeholder="Class">
+                    </div>
+                    <div class="col-xs-12 p-0">
+                        <input type="text" class="form-control" ng-disabled="0" ng-model="ctrl.userDetails.school" validation="required" name="ad-school" placeholder="School">
+                    </div>
+                    <div class="col-xs-12 p-0">
+                        <input type="text" class="form-control" ng-disabled="0" ng-model="ctrl.userDetails.email" name="ad-email" validation="required|email" placeholder="Email">
+                    </div>
+                    <div class="col-xs-12 p-0">
+                        <input type="text" class="form-control" ng-disabled="0" ng-model="ctrl.userDetails.phone" name="ad-phone" validation="required|number" placeholder="Phone">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer idea">
+            <div class="col-xs-12">
+                <button class="btn btn-warning" type="button" ng-click="ctrl.registerUser(manageIdeaForm)">Next</button>
+            </div>
+        </div>
+    </div>
+    <!--Not logged in-->
+    <div ng-if="!ctrl.isLoggedIn.status">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-titles">Login In</h3>
+        </div>
+        <div class="modal-body col-xs-12 idea" id="modal-bodys">
+            <div class="col-xs-12 text-center">
+                <button type="button" class="loginBtn loginBtn--facebook" ng-click="ctrl.logUserIn()">Login with Facebook</button>
+            </div>
+        </div>
+        <div class="modal-footer idea">
+        </div>
+    </div>
+</form>
+

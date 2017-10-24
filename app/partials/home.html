@@ -1,0 +1,28 @@
+<div class="col-xs-12 y-investor-header p-0">
+
+    <div class="col-xs-12 header-tabs-container">
+        <div class="col-xs-6 p-0">
+            <select class="form-control" ng-options="item.value as item.name for item in ctrl.listingData" ng-model="ctrl.dates.start" ng-change="ctrl.onDateChange()"></select>
+        </div>
+        <div class="col-xs-6 p=0">
+            <select class="form-control" ng-options="item.value as item.name for item in ctrl.listingData" ng-model="ctrl.dates.end" ng-change="ctrl.onDateChange()"></select>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-xs-12 data-container" >
+    <div class="p-0" ng-class="ctrl.imageData ? 'col-xs-8': 'col-xs-12'">
+        <div id="map"></div>
+    </div>
+
+    <div class="col-xs-4 image-widget" ng-if="ctrl.imageData">
+        <image-component image-data="ctrl.imageData" lat-long-data="ctrl.latLongData"></image-component>
+        <div class="col-xs-12 text-center" style="margin-top: 10px;">
+            <button class="btn btn-default" ng-disabled="ctrl.disablePrev" ng-click="ctrl.loadAnotherPoint('p')">previous</button>
+            <button class="btn btn-default" ng-disabled="ctrl.disableNext" ng-click="ctrl.loadAnotherPoint('n')">Next</button>
+        </div>
+    </div>
+</div>
+
+<footer-component></footer-component>

@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800');
+
+body {
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+.m-0{
+    margin: 0;
+    padding: 0;
+}
+.p-0{
+    padding: 0;
+}
+
+
+/*
+* Navbar
+*/
+ul.navbar-y-investor{
+    float: right;
+    padding: 0 0 6px 0;
+}
+ul.navbar-y-investor li{
+    font-size: 9px;
+    font-weight: bold;
+}
+ul.navbar-y-investor li.active{
+    font-size: 9px;
+    font-weight: bold;
+    border-bottom: solid 1px #fff;
+}
+ul.navbar-y-investor li a{
+    color: #fff;
+    padding: 8px 5px 1px 5px;
+}
+
+ul.navbar-y-investor li a:hover,
+ul.navbar-y-investor li a:active,
+ul.navbar-y-investor li a:focus{
+    background: none;
+    cursor: pointer;
+}
+
+ul.navbar-y-investor > li > .dropdown-menu{
+    background: #071f30;
+    text-align: center;
+}
+ul.navbar-y-investor > li > .dropdown-menu a{
+    text-align: center;
+}
+ul.navbar-y-investor > li > .dropdown-menu a:active,
+ul.navbar-y-investor > li > .dropdown-menu a:focus,
+ul.navbar-y-investor > li > .dropdown-menu a:hover{
+    text-align: center;
+    background: none;
+    color: #fff;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+    background: none;
+}
+
+/*
+* Common footer
+*/
+
+.y-investor-footer{
+    width: 100%;
+    padding: 10px 20%;
+    margin: 0;
+    background: #09233C;
+    min-height: 50px;
+
+}
+.copy-right {
+    color: #fff;
+    text-align: center;
+    border-top: solid 1px #fff;
+}
+.copy-right p {
+    font-size: 10px;
+    margin: 9px 0 0 10px;
+}
+.footer-contents{
+
+}
+.footer-contents h4{
+    color: #fff;
+}
+.footer-contents p{
+    font-size: 10px;
+    color:#fff;
+}
+.footer-contents ul{
+    padding: 0;
+}
+.footer-contents li{
+    list-style-type: square;
+    color: #fff;
+}
+.footer-contents li{
+    cursor: pointer;
+    color: #fff;
+    font-size: 10px;
+    padding: 3px 1px;
+}
+
+/*
+* Common header
+*/
+
+.y-investor-header{
+    position: absolute;
+    background: #fff;
+    min-height: 30px;
+    padding: 0 25%;
+}
+.header-info{
+    min-height: 34px;
+}
+.header-info .btn{
+    background: #4bcbeb;
+    border-radius: 0;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 9px;
+}
+.header-tabs-container{
+    padding: 20px;
+    background: #071f30;
+    z-index: 1;
+}
+.toolbox{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+    background: #363636;
+    border-radius: 2px 0 0 2px;
+}
+.toolbox i{
+    color: #fff;
+}
+
+.data-container{
+    margin: 76px 0 0 0;
+    padding: 0;
+    min-height: 120px;
+    background: #fff;
+}
+
+#map {
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#floating-panel {
+    position: absolute;
+    top: 10px;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+#right-panel {
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+#right-panel select, #right-panel input {
+    font-size: 15px;
+}
+
+#right-panel select {
+    width: 100%;
+}
+
+#right-panel i {
+    font-size: 12px;
+}
+#right-panel {
+    height: 100%;
+    float: right;
+    width: 390px;
+    overflow: auto;
+}
+#map {
+    min-height: 600px;
+    width: 100%;
+}
+#floating-panel {
+    background: #fff;
+    padding: 5px;
+    font-size: 14px;
+    font-family: Arial;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+    display: none;
+}
+@media print {
+    #map {
+        height: 500px;
+        margin: 0;
+    }
+    #right-panel {
+        float: none;
+        width: auto;
+    }
+}
+
+.image-widget{
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 0;
+    background: #f3f1ed;
+}
+
+.image-container{
+    padding: 2px;
+    border: solid 1px #fff;
+    background: #fff;
+    min-height: 160px;
+}
+
+.image-container p{
+    font-weight: bold;
+    font-size: 10px;
+    color: #000
+}
+
+.image-container img{
+    width: 100%;
+    max-height: 120px;
+}
+
+.data-container{
+    height: 100%;
+}
+
+.image-widget{
+    height: 100%;
+    overflow-y: scroll;
+}
+.tags{
+    padding: 2px 3px;
+    background: green;
+    display: inline-block;
+    border-radius: 10px;
+    color: #fff;
+    margin: 0px 2px;
+}

@@ -1,0 +1,15 @@
+
+<div class="col-xs-12 p-0">
+    <h2 class="text-center">{{ctrl.latLongData.geo.name}}</h2>
+    <div class="col-xs-12 p-0">
+        <p class="tags" ng-repeat="tags in ctrl.latLongData.tags.data">
+            {{tags.displayedName}}
+        </p>
+    </div>
+    <div class="col-xs-6 p-0" ng-repeat="image in ctrl.imageData">
+        <div class="col-xs-12 image-container">
+            <img ng-src={{image.url}} class="img-responsive img-data">
+            <p>{{image.caption}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="hackTravel">
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Hack Travel Guide</title>
+  <!-- styles -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+  <link rel="stylesheet" href="bower_components/animate.css/animate.css"/>
+  <link rel="stylesheet" href="js/extraDependencies/angular-block-ui/dist/angular-block-ui.css">
+  <link rel="stylesheet" href="js/extraDependencies/angular-toastr/dist/angular-toastr.css">
+
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+
+<div class="container-fluid m-0">
+  <div ui-view></div>
+</div>
+<!-- scripts -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/extraDep/router.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="js/extraDependencies/angular-block-ui/dist/angular-block-ui.min.js"></script>
+
+<script src="js/extraDependencies/angular-translate/angular-translate.min.js"></script>
+<script src="js/extraDependencies/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+
+<script src="js/extraDependencies/angular-validation-ghiscoding/dist/angular-validation.min.js"></script>
+<script src="js/extraDependencies/angular-toastr/dist/angular-toastr.tpls.js"></script>
+
+
+<script src="js/main.js"></script>
+
+<!--Components-->
+<script src="js/components/header.js"></script>
+<script src="js/components/footer.js"></script>
+<script src="js/components/imageComponent.js"></script>
+
+<!--Controllers-->
+<script src="js/controllers/home.js"></script>
+<script src="js/controllers/headerctrl.js"></script>
+<script src="js/controllers/footerCtrl.js"></script>
+<script src="js/controllers/imagesCtrl.js"></script>
+
+<!--Services-->
+<script src="js/service/idea.modal.service.js"></script>
+<script src="js/service/modal.service.js"></script>
+
+
+<!--Map Service-->
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBihV22FY0XVAJo_jTRTNfloao58gve-iU&callback=initMap">
+</script>
+<!--<script src='//cdn.trover.com/assets/widget.js' type='text/javascript'>
+</script>-->
+
+</body>
+</html>

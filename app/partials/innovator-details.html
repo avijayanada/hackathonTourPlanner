@@ -1,0 +1,114 @@
+<header-component active-class="challenge" is-logged-in="ctrl.isLoggedIn"></header-component>
+
+<div class="col-xs-12 p-0 cover cover-image-investor h-350">
+    <h2><b>400</b> Students<br> have shared their Innovative idea, <br> whats yours?</h2>
+</div>
+
+<div class="col-xs-12 p-0 tab-options details">
+    <div class="col-xs-6 p-0 tab-options-item left-box">
+        <div class="col-xs-4 p-0">
+            <img src="img/icons/light-bulb.svg">
+        </div>
+        <div class="col-xs-8 p-0 txt-container">
+            <p>Young Thinker Challenge</p>
+        </div>
+    </div>
+    <div class="col-xs-3 p-0 tab-options-item right-box b-right" ng-click="ctrl.sortList('T')">
+        <div class="col-xs-4 p-right">
+            <img src="img/icons/favorites.svg">
+        </div>
+        <div class="col-xs-8 p-0 txt-container">
+            <p>Top Rated</p>
+        </div>
+    </div>
+    <div class="col-xs-3 p-0 tab-options-item right-box">
+        <div class="col-xs-4 p-right">
+            <img src="img/icons/product-realise.svg">
+        </div>
+        <div class="col-xs-8 p-0 txt-container">
+            <p>Recent</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-12 p-0 tab-options-list" >
+    <div class="col-xs-6 p-0">
+        <div class="col-xs-12 p-0 e-options left">
+            <div class="col-xs-12 data-list idea-description"  ng-repeat="idea in ctrl.ideaData track by $index" ng-if="$even">
+                <div class="col-xs-12 p-0 idea">
+                    <div class="col-xs-3 p-0 img-container">
+                        <img class="img-circle img-responsive" src="img/icons/1.jpg">
+                    </div>
+                    <div class="col-xs-9 p-0">
+                        <div class="col-xs-8 p-0">
+                            <h2 class="idea-description-title">{{idea.title}}</h2>
+                        </div>
+                        <div class="col-xs-4 p-0">
+                            <div class="like-share-box">
+                                <p>{{idea.likes}} <br><small>Share</small></p>
+                            </div>
+                            <div class="like-share-box">
+                                <p>{{idea.shares}} <br><small>Like</small></p>
+                            </div>
+                            <div class="like-share-box" ng-click="ctrl.editIdea(idea, 'I')">
+                                <img class="img-responsive edit-ico" src="img/icons/edit.svg">
+                            </div>
+                        </div>
+                        <p class="idea-description-txt">{{idea.idea}}</p>
+                        <div class="row" ng-if="ctrl.isLoggedIn.status">
+                            <div class="fb-share-image" ng-click="ctrl.share(idea)">
+                                <img class="img-responsive" src="img/icons/fb.svg">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 p-0">
+        <div class="col-xs-12 p-0 e-options">
+            <div class="col-xs-12 data-list idea-description"  ng-repeat="idea in ctrl.ideaData track by $index" ng-if="$odd">
+                <div class="col-xs-12 p-0 idea">
+                    <div class="col-xs-3 p-0 img-container">
+                        <img class="img-circle img-responsive" src="img/icons/1.jpg">
+                    </div>
+                    <div class="col-xs-9 p-0">
+                        <div class="col-xs-8 p-0">
+                            <h2 class="idea-description-title">{{idea.title}}</h2>
+                        </div>
+                        <div class="col-xs-4 p-0">
+                            <div class="like-share-box">
+                                <p>{{idea.likes}} <br><small>Share</small></p>
+                            </div>
+                            <div class="like-share-box">
+                                <p>{{idea.shares}} <br><small>Like</small></p>
+                            </div>
+                            <div class="like-share-box" ng-click="ctrl.editIdea(idea, 'I')">
+                                <img class="img-responsive edit-ico" src="img/icons/edit.svg">
+                            </div>
+                        </div>
+                        <p class="idea-description-txt">{{idea.idea}}</p>
+                        <div class="row" ng-if="ctrl.isLoggedIn.status">
+                            <div class="fb-share-image" ng-click="ctrl.share(idea)">
+                                <img class="img-responsive" src="img/icons/fb.svg">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="add-button-container">
+        <button type="button" class="btn btn-add-idea" ng-click="ctrl.showIdeaModal('I')"><i class="fa fa-plus"></i></button>
+    </div>
+</div>
+
+<footer-component></footer-component>
+
+
+
